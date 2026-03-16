@@ -3,6 +3,7 @@ import 'package:nice_colors/core/rgb_color.dart';
 
 class ColorGenerator {
   final _random = Random();
+  final int maxValue = 255;
 
   RgbColor random() {
     return RgbColor(
@@ -14,9 +15,9 @@ class ColorGenerator {
 
   RgbColor oppositeTo(RgbColor baseColor) {
     return RgbColor(
-      255 - baseColor.r,
-      255 - baseColor.g,
-      255 - baseColor.b,
+      maxValue - baseColor.r,
+      maxValue - baseColor.g,
+      maxValue - baseColor.b,
     );
   }
 
@@ -24,7 +25,7 @@ class ColorGenerator {
     if (baseColor.r > 128 || baseColor.g > 128 || baseColor.b > 200) {
       return const RgbColor(0, 0, 0);
     } else {
-      return const RgbColor(255, 255, 255);
+      return RgbColor(maxValue, maxValue, maxValue);
     }
   }
 }
