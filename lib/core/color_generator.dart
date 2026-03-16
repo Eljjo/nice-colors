@@ -21,7 +21,7 @@ class ColorGenerator {
   }
 
   RgbColor contrastTo(RgbColor baseColor) {
-    if (baseColor.r > 128 || baseColor.g > 128 || baseColor.b > 110) {
+    if (baseColor.r > 128 || baseColor.g > 128 || baseColor.b > 200) {
       return const RgbColor(0, 0, 0);
     } else {
       return const RgbColor(255, 255, 255);
